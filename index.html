@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <section style="text-align: center;">
+        <h1>My Family Book</h1>
+        <img id="Image" style="height: 300px; margin-bottom: 40px;" src="Family.jpg">
+        <h4 id="Name">My Family</h4>
+        <button onclick="change();">Next</button>
+        <script>
+            var images = ["Family.jpg", "Father.jpg", "Mother.jpg", "Brother.jpg", "Me.png"];
+            var names = ["My Family", "Father", "Mother", "Brother", "Me"];
+            var i = 0;
+            function change()
+            {
+                i++;
+                var no_of_names = 4;
+                if (i > no_of_names)
+                {
+                    i = 0;
+                }
+                var updated_image = images[i]
+                var updated_name = names[i]
+                document.getElementById("Image").src = updated_image;
+                document.getElementById("Name").innerHTML = updated_name;
+            }
+        </script>
+        </section>
+    </body>
+</html>
